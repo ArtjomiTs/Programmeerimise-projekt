@@ -1,0 +1,25 @@
+from flask import Flask, render_template, request, redirect, url_for
+
+app = Flask(__name__)
+
+# /// Avaleht (index.html)
+@app.route('/')
+def avaleht():
+    return render_template('index.html')
+
+# /// Tagasiside leht (tagasiside.html)
+@app.route('/tagasiside', methods=['GET', 'POST'])
+def tagasiside():
+    if request.method == 'POST':
+        feedback_message = request.form['feedback']
+        print('Kasutaja tagasiside:', feedback_message)
+        return redirect(url_for('aitah'))
+    return render_template('tagasiside.html')
+
+# /// Tänuleht
+@app.route('/aitah')
+def aitah():
+    return '<h2>Aitäh tagasiside eest!</h2><a href="/">Tagasi avalehele</a>'
+
+if __name__ == '__main__':
+    app.run(debug=True)

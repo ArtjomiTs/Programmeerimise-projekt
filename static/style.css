@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: rgb(19, 216, 230);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4f8d90;
+    color: white;
+    padding: 1.5rem 2rem;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+/* Põhisisu */ 
+main {
+    max-width: 800px;
+    background-color: white;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* Tagasiside nupp */
+.feedback-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4f8d90;
+    color: white;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Sujuv üleminek */
+}
+
+.feedback-form {
+    display:flex;
+    flex-direction: column;
+    color: blue;
+}
+
+.feedback-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.feedback-form button {
+    margin-top: 1rem;
+    background-color: #4f8d90;
+    color: rgb(28, 34, 162);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.feedback-form button:hover {
+    background-color: #3b6d6f;
+}
+
+footer {
+    text-align: right;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
