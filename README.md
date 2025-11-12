@@ -1,4 +1,3 @@
-'''
 Projekt:
 Interaktiivne ÕIS-i kasutamist toetav rakendus veebilehe kujul.
 
@@ -11,4 +10,4 @@ Programmi käivitamiseks "python app.py"
 Veebilehele on hetkel lisatud tagasiside funktsionaalsus, teised funktsioonid lisanduvad
 järgneva töö käigus. 
 
-'''
+
