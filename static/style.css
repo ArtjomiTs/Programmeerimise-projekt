@@ -7,7 +7,7 @@
 html, body {
     height: 100%;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: rgb(19, 216, 230);
+    background-color: black;
     margin: 0;
     padding: 0;
     color: #333;
@@ -16,16 +16,26 @@ html, body {
 }
 
 header {
-    background-color: #4f8d90;
-    color: white;
-    padding: 1.5rem 2rem;
+    position: relative;
+    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    color: #39FF14;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 4px 25px rgba(0, 255, 0, 0.25);
     text-align: left;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    letter-spacing: 1px;    
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px purple;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    color: purple;
+    border-radius: 8px;
+    box-shadow: 0 -4px 25px rgba(0,255,0,0.15);
 }
 
 nav {
@@ -38,21 +48,24 @@ nav li {
     margin: 0 10px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-
+nav a[href="{{ url_for('avaleht') }}"] {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: #39FF14;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
 
-nav a:hover {
-    background-color: rgba(255,255,255,0.2);
+nav a[href="{{ url_for('avaleht') }}"]:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #39FF14, 0 0 35px #39FF14;
 }
 /* Põhisisu */ 
 main {
+    flex: 1 0 auto;
     max-width: 800px;
     background-color: white;
     margin: 2rem auto;
@@ -67,10 +80,10 @@ main {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background-color: #4f8d90;
+    background-color: purple;
     color: white;
     padding: 15px 25px;
-    font-size: 1.2rem;
+    font-size: 2rem;
     border-radius: 30px;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -81,7 +94,7 @@ main {
 .feedback-form {
     display:flex;
     flex-direction: column;
-    color: blue;
+    color: #39FF14;
 }
 
 .feedback-form label {
@@ -93,14 +106,14 @@ main {
     padding: 10px;
     font-size: 1rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #39FF14;
     resize: vertical;
 }
 
 .feedback-form button {
     margin-top: 1rem;
-    background-color: #4f8d90;
-    color: rgb(28, 34, 162);
+    background-color: #39FF14;
+    color: black;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -114,6 +127,7 @@ main {
 }
 
 footer {
+    flex-shrink: 0;
     text-align: right;
     padding: 20px 0;
     margin-top: 40px;
@@ -128,5 +142,88 @@ body {
 }
 
 footer {
-    margin-top: auto;
+    text-align: right;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    color: purple;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0 -4px 25px rgba(0,255,0,0.15);
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px #39FF14;
+    
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    left: 530px;
+    z-index: 9999;
+}
+
+.dropbtn {
+    background-color: black;
+    color: purple;
+    padding: 14px 20px;
+    font-size: 35px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(150, 0, 255, 0.7);
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid purple;
+    border-radius: 10px;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px rgba(0,255,0,0.35);
+    animation: dropdownFade 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    color: purple;
+    font-weight: 500;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(57,255,20,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2c5daa;
+}
+/* et lingid oleksid drop-down menüüs üksteise all */
+.dropdown-content li {
+    width: 100%;
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.avaleht-btn {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background-color: purple;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px purple, 0 0 20px purple;
+    transition: transform 0.2s, box-shadow 0.3s;
 }

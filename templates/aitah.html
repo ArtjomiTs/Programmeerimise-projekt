@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aitäh tagasiside eest!</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Aitäh tagasiside eest!</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('avaleht') }}">Avaleht</a></li>
-                <li><a href="{{ url_for('tagasiside') }}">Tagasiside</a></li>
-            </ul>
-        </nav>
-    </header>
+{% extends "base.html" %}
 
-    <main>
-        <h2>Sinu tagasiside on saadetud!</h2>
-        <p>Täname, et võtsid aega oma mõtteid jagada. See aitab meil ÕIS-i paremaks muuta.</p>
-        <p> href="{{ url_for('avaleht') }}">Tagasi avalehele</a></p>
-    </main>
+{% block title %}Aitäh tagasiside eest!{% endblock %}
 
-    <footer>
-        <p>ÕIS-i tutvustav veebileht. 2025</p>
-    </footer>
-    
-</body>
-</html>
+{% block content %}
+<h2>Sinu tagasiside on saadetud!</h2>
+
+<p>Täname, et võtsid aega oma mõtteid jagada. See aitab meil ÕIS-i paremaks muuta.</p>
+
+<p>
+    <a href="{{ url_for('avaleht') }}">Tagasi avalehele</a>
+</p>
+{% endblock %}

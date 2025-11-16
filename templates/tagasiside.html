@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tagasiside</title>
-    <link rel="stylesheet" href ="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <header>
-        <h1>Anna meile tagasisidet!</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('avaleht') }}">Avaleht</a></li>
-                <li><a href="#">Profiil</a></li>
-                <li><a href="#">Postkast</a></li>
-                <li><a href="#">Minu kalender</a></li>
-                <li><a href="#">Õppetulemused</a></li>
-                <li><a href="#">Valikud õppekavas</a></li>
-                <li><a href="#">Registreeringud</a></li>
-                <li><a href="#">Avaldused</a></li>
-                <li><a href="#">Tunniplaanid</a></li>
-                <li><a href="#">Õppeained</a></li>
-                <li><a href="#">Õppekavad</a></li>
-                <li><a href="#">Akadeemiline kalender</a></li>
-            </ul>  
-        </nav>
-    </header>
-    
-    <main>
-        <h2>Tagasiside vorm</h2>
-        <form method="POST" class="feedback-form">
-            <label for="feedback">Sisesta oma tagasiside:</label><br>
-            <textarea id="feedback" name="feedback" rows="6" cols="60" required></textarea><br><br>
-            <button type="submit">Saada tagasiside</button>
-        </form>
-    </main>
-    
-    <footer>
-        <p>ÕIS-i tutvustav veebileht. 2025
-    </footer>
-</body>
-</html>
+{% extends "base.html" %}
 
+{% block title %}Tagasiside – ÕIS-i tutvustav rakendus{% endblock %}
+
+{% block content %}
+<h2>Tagasiside vorm</h2>
+
+<form method="POST" class="feedback-form">
+    <label for="feedback">Sisesta oma tagasiside:</label><br>
+    <textarea id="feedback" name="feedback" rows="6" cols="60" required></textarea><br><br>
+
+    <button type="submit">Saada tagasiside</button>
+</form>
+{% endblock %}

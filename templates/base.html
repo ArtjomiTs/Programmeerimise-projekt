@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ÕIS-i tutvustav rakendus{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+<header>
+    <h1>ÕIS-i tutvustav rakendus</h1>
+
+    <nav>
+        <ul class="menu">
+             <li><a href="{{ url_for('avaleht') }}" class="avaleht-btn">Avaleht</a></li>
+                
+             <!-- Dropdown menüü -->
+            <li class="dropdown">
+                <a href="#" class="dropbtn">ÕIS<IS></IS>&#9776;</a>
+                <ul class="dropdown-content">
+                    <li><a href="{{ url_for('profiil') }}">Profiil</a></li>
+                    <li><a href="{{ url_for('postkast') }}">Postkast</a></li>
+                    <li><a href="#">Minu kalender</a></li>
+                    <li><a href="#">Õppetulemused</a></li>
+                    <li><a href="#">Valikud õppekavas</a></li>
+                    <li><a href="#">Registreeringud</a></li>
+                    <li><a href="#">Avaldused</a></li>
+                    <li><a href="#">Tunniplaanid</a></li>
+                    <li><a href="#">Õppeained</a></li>
+                    <li><a href="#">Õppekavad</a></li>
+                    <li><a href="#">Akadeemiline kalender</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+      
+        <!-- Tagasiside link -->
+    <button class="feedback-button" onclick="window.location.href='{{ url_for('tagasiside') }}'">
+        Anna meile tagasisidet!
+    </button>
+</header>
+       
+<main>
+    {% block content %}
+    <!-- Siia läheb teiste vahelehtede/alamlehtede põhisisu-->
+    {% endblock %}
+</main>
+
+<footer>
+    <p>ÕIS-i tutvustav veebileht. 2025</p>
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>
+
