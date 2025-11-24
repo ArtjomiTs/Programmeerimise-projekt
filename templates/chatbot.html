@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Chatbot!{% endblock %}
+
+{% block content %}
+<h2>Chatbot!</h2>
+
+<div id="chatbox">
+    <p><em>Vestlus hakkab siin...</em></p>
+</div>
+
+<form id="chat-form">
+    <input type="text" id="user-input" placeholder="Kirjuta oma küsimus..." required>
+    <button type="submit">Saada</button>
+</form>
+    
+    <style>
+        #chatbox { width: 400px; margin: 50px auto; border: 1px solid purple; padding: 10px; border-radius: 10px; }
+        .message { margin: 10px 0; }
+        .user { color: yellow }
+        .bot { color: red }
+    </style>
+</head>
+
+{% endblock %}

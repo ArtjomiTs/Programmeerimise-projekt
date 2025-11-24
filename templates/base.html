@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ÕIS-i tutvustav rakendus{% endblock %}</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/kujundus_langev_taust.css') }}">
 
     {% block head %}{% endblock %}
 </head>
 <body>
+
+<div class="lines">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div>
+</div>
 
 <header>
     <h1>ÕIS-i tutvustav rakendus</h1>
@@ -42,6 +55,11 @@
     <button class="feedback-button" onclick="window.location.href='{{ url_for('tagasiside') }}'">
         Anna meile tagasisidet!
     </button>
+
+    <!-- Chatbot nupp -->
+     <button class="chatbot-button" onclick="window.location.href='{{ url_for('chatbot') }}'">
+        Chatbot
+     </button>
 </header>
        
 <main>

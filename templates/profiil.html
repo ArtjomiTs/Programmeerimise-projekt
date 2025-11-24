@@ -3,6 +3,19 @@
 {% block title %}Profiil{% endblock %}
 
 {% block content %}
+
 <h1>Profiil</h1>
+
+<div class="profile-card">
+    <div class="profile-container">
+        <img src="{{ url_for('static', filename='images/profiil.png') }}"
+            alt="Profiili pilt" class="profile-image">
+
+        <div class="profile-info">
+            <h2>Kasutaja Profiil</h2>
+            <p>Siit vahelehelt leiad kogu vajaliku informatsiooni ÕIS-i profiililt.</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

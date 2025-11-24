@@ -15,7 +15,7 @@ järgneva töö käigus.
 
 
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 
 app = Flask(__name__)
 
@@ -44,9 +44,32 @@ def profiil():
     return render_template('profiil.html')
 
 # /// Postkasti leht (postkast.html)
-@app.route ('/postkast.html')
+@app.route ('/postkast')
 def postkast():
     return render_template('postkast.html')
+
+# /// Algne chatbot funktsioon
+def chatbot_response(user_input):
+    user_input = user_input.lower()
+
+    if "tere" in user_input or "hello" in user_input:
+        return "Tere! Kuidas saan aidata?"
+    elif "aitäh" in user_input:
+        return "Pole tänu väärt!"
+    else:
+        return "Vabandust, ma ei saa sellest aru. Proovi teist küsimust."
+    
+# /// Chatboti leht
+@app.route('/chatbot')
+def chatbot():
+    return render_template('chatbot.html')
+
+# /// API vastus kasutaja sõnumile
+@app.route('/get_response', methods=['POST'])
+def get_response():
+    user_input = request.form['message']
+    response = chatbot_response(user_input)
+    return jsonify({'response' : response})
 
 if __name__ == '__main__':
     app.run(debug=True)
