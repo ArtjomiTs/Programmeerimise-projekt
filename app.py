@@ -48,6 +48,43 @@ def profiil():
 def postkast():
     return render_template('postkast.html')
 
+@app.route ('/kalender')
+def kalender():
+    return render_template('kalender.html')
+
+@app.route('/õppetulemused')
+def õppetulemused():
+    return render_template('õppetulemused.html')
+
+@app.route('/valikud')
+def valikud():
+    return render_template('valikud.html')
+
+@app.route('/registreeringud')
+def registreeringud():
+    return render_template('registreeringud.html')
+
+@app.route('/avaldused')
+def avaldused():
+    return render_template('avaldused.html')
+
+@app.route('/tunniplaanid')
+def tunniplaanid():
+    return render_template('tunniplaanid.html')
+
+@app.route('/õppeained')
+def õppeained():
+    return render_template('õppeained.html')
+
+@app.route('/õppekavad')
+def õppekavad():
+    return render_template('õppekavad.html')
+
+@app.route('/akadeemiline_kalender')
+def akadeemiline_kalender():
+    return render_template('akadeemiline_kalender.html')
+
+
 # /// Algne chatbot funktsioon
 def chatbot_response(user_input):
     user_input = user_input.lower()

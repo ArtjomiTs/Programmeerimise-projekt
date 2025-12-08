@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Postkast{% endblock %}
 
 {% block content %}
 <h1>Postkast</h1>
+
+<div class="postkast-card">
+    <div class="postkast-container">
+        <img src="{{url_for('static', filename='images/postkast.png') }}"
+            alt="Postkasti ikoon" class="postkast-image">
+
+        <div class="postkast-info">
+            <h2>Postkasti funktsionaalsus ÕIS-is</h2>
+            <p>Siit vahelehelt saad lugeda TÜ postkasti kasutamise kohta ning kõike sellega seonduvat.</p>
+        </div>
+    </div>
+</div> 
 
 {% endblock %}

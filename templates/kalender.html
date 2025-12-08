@@ -1,8 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Kalender{% endblock %}
 
 {% block content %}
 <h1>Kalender</h1>
+
+<div class="kalender-container">
+    <img src="{{url_for('static', filename='images/kalender1.png') }}"
+            alt="Kalendri ikoon" class="kalender-image">
+    <div id="kalender"></div>
+
+<img src="{{url_for('static', filename='images/kalender2.png') }}"
+            alt="Kalendri ikoon" class="kalender-image">
+
+    <div class="kalender-info">
+        <h2>Kalendri funktsionaalsus ÕIS-is</h2>
+        <p>Siit vahelehelt saad lugeda TÜ kalendri kasutamise kohta ÕIS-is ning kõike sellega seonduvat.</p>
+    </div>
+</div>
 
 {% endblock %}

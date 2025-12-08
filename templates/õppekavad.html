@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Õppekavad{% endblock %}
 
 {% block content %}
 <h1>Õppekavad</h1>
+
+<div class="õppekavad-container">
+    <img src="{{url_for('static', filename='images/õppekavad.png') }}"
+            alt="Õppekavade ikoon" class="õppekavad-image">
+
+    <div class="õppekavad-info">
+        <h2>Õppekavad ÕIS-is</h2>
+        <p>Sellelt vahelehelt leiad kõik õppekavade vaatamise kohta ÕIS-is.</p>
+    </div>
+</div>
 
 {% endblock %}

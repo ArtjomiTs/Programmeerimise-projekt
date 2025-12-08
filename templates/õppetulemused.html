@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Õppetulemused{% endblock %}
 
 {% block content %}
 <h1>Õppetulemused</h1>
+
+<div class="õppetulemused-container">
+    <h2>Õppetulemused ÕIS-is</h2>
+        <img src="{{url_for('static', filename='images/õppetulemused.png') }}"
+            alt="Õppetulemuste ikoon" class="õppetulemused-image">
+
+        <div class="õppetulemused-info">
+            <h2>Õppetulemuste funktsionaalsus ÕIS-is</h2>
+            <p>Siit vahelehelt saad lugeda TÜ õppetulemuste vahelehe kasutamise kohta ÕIS-is ning kõike sellega seonduvat.</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

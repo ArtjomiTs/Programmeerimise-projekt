@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Avaldused{% endblock %}
 
 {% block content %}
 <h1>Avaldused</h1>
+
+<div class="avaldused-container">
+    <img src="{{url_for('static', filename='images/avaldused.png') }}"
+            alt="Avalduste ikoon" class="avaldused-image">
+    
+    <div class="avaldused-info">
+        <h2>Avaldused ÕIS-is</h2>
+        <p>Siit vahelehelt leiad kõik avalduste esitamisega seonduva ÕIS-is<p>
+    </div>
+</div> 
 
 {% endblock %}

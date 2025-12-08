@@ -1,8 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Akadeemiline kalender{% endblock %}
 
 {% block content %}
 <h1>Akadeemiline kalender</h1>
+
+<div class="akadeemiline-container">
+    <img src="{{url_for('static', filename='images/akadeemiline1.png') }}"
+            alt="Akadeemiline ikoon" class="akadeemiline-image">
+
+    <img src="{{url_for('static', filename='images/akadeemiline2.png') }}"
+            alt="Akadeemiline ikoon" class="akadeemiline-image">
+
+    <div class="akadeemiline-info">
+        <h2>Akadeemiline kalender ÕIS-is</h2>
+        <p>Sellelt vahelehelt leiad kogu info akadeemilise kalendri kohta ÕIS-is.</p>
+    </div>
+</div>
 
 {% endblock %}

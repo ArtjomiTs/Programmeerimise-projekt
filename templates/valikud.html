@@ -1,8 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}Profiil{% endblock %}
+{% block title %}Valikud õppekavas{% endblock %}
 
 {% block content %}
 <h1>Valikud õppekavas</h1>
+
+<div class="valikud-container">
+    <img src="{{url_for('static', filename='images/valikud.png') }}"
+            alt="Valikute ikoon" class="valikud-image">
+            
+    <div class="valikud-info">
+        <h2>Valikud õppekavas ÕIS-is</h2>
+        <p>Siit vahelehelt saad lugeda TÜ kalendri kasutamise kohta ÕIS-is ning kõike sellega seonduvat.</p>
+    </div> 
+</div>
 
 {% endblock %}
