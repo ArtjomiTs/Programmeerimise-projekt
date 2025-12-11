@@ -1,3 +1,62 @@
+section {
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 25px;
+  background-color: white;
+  color: black;
+  
+}
+
+.page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} 
+
+.page-header {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.page-body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.page-image {
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.page-info {
+  flex: 1;
+  font-size: 1.25 rem;
+}
+
+.page-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.page-list {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-top: 20px; 
+}
+
+.page-list li {
+  margin-bottom: 12px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -114,23 +173,22 @@ header {
     position: relative;
     background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
     color: #39FF14;
-    padding: 2rem 2.5rem;
-    box-shadow: 0 4px 25px rgba(0, 255, 0, 0.25);
-    text-align: left;
+    padding: 1.2rem 2.5rem;
+    box-shadow: 0 10px 25px rgba(0, 255, 0, 0.25);
+    text-align: center;
     border-radius: 8px;
-    letter-spacing: 1px;    
+    letter-spacing: 1px;  
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 1px;
     text-shadow: 0 0 10px purple;
     padding: 20px 0;
     background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
     color: purple;
-    border-radius: 8px;
-    box-shadow: 0 -4px 25px rgba(0,255,0,0.15);
+    border-radius: 0px;
 }
 
 nav {
@@ -174,17 +232,17 @@ main {
 /* Tagasiside nupp */
 .feedback-button {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: purple;
+    top: 35px;
+    right: 20px;
+    background-color: black;
     color: white;
     padding: 15px 25px;
     font-size: 2rem;
-    border-radius: 30px;
+    border-radius: 12px;
     border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 15px rgba(150, 0, 255, 0.7);
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Sujuv üleminek */
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s; /* Sujuv üleminek */
 }
 
 .feedback-form {
@@ -216,25 +274,13 @@ main {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s;
+    position: fixed;
+    margin-top: 200px;
+    
 }
 
 .feedback-form button:hover {
     background-color: #3b6d6f;
-}
-
-footer {
-    flex-shrink: 0;
-    text-align: right;
-    padding: 20px 0;
-    margin-top: 40px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 8px;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
 }
 
 footer {
@@ -253,13 +299,13 @@ footer {
 .dropdown {
     position: absolute;
     top: 50px;
-    left: 530px;
+    right: 530px;
     z-index: 9999;
 }
 
 .dropbtn {
     background-color: black;
-    color: purple;
+    color: white;
     padding: 14px 20px;
     font-size: 35px;
     border: none;
@@ -313,6 +359,34 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Avalehe tekst */
+.pealkiri1-tekst {
+  font-size: 35px;
+  margin-top: 5px;
+}
+
+.pealkiri-tekst {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.sissejuhatus-tekst {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.info-box {
+  font-size: 15px;
+  margin-top: 500px;
+  padding: 30px;
+}
+
+.autorite-list {
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
 .avaleht-btn {
     font-size: 1.6rem;
     font-weight: bold;
@@ -326,16 +400,17 @@ footer {
 
 .chatbot-button {
     position: fixed;
-    bottom: 50px;
-    right: 20px;
-    background-color: purple;
+    bottom: 110px;
+    right: 920px;
+    background-color: black;
     color: white;
     padding: 15px 25px;
-    font-size: 2rem;
-    border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    font-size: 35px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0px 15px rgba(150,0,255,0.7);
     cursor: pointer;
-    transition: background-color: 0.3s, transform 0.3s;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
     z-index: 1000; /* Et oleks üle teiste elementide */
 }
 
@@ -343,35 +418,12 @@ footer {
     background-color: #5a00b3;
     transform: scale(1.1);
 }
-
-.profile-card {
-  margin: 3rem auto;
-  padding: 4rem;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(128, 0, 255, 0.4),
-              0 0 45px rgba(57, 255, 20, 0.25);
-  color: purple;
-  border: 2px solid purple;
-  display: block;
- 
-
-.profile-container {
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  justify-content: left;
-  gap: 3rem;
-  flex-wrap: wrap;
-  width: 100%;
-
-}
-
+/* Profiili vahelehe pilt */
 .profile-image {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
   height: auto;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 

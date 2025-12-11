@@ -3,18 +3,29 @@
 {% block title %}Õppetulemused{% endblock %}
 
 {% block content %}
-<h1>Õppetulemused</h1>
 
-<div class="õppetulemused-container">
-    <h2>Õppetulemused ÕIS-is</h2>
-        <img src="{{url_for('static', filename='images/õppetulemused.png') }}"
-            alt="Õppetulemuste ikoon" class="õppetulemused-image">
+<section class="page-content">
+    <div class="page-card">
 
-        <div class="õppetulemused-info">
+        <div class="page-header">
+            <h1>Õppetulemused</h1>
+        </div>
+
+        <div class="page-body">
+            <img src="{{url_for('static', filename='images/õppetulemused.png') }}" alt="Õppetulemuste ikoon" class="õppetulemused-image">
+
+            <div class="page-info">
             <h2>Õppetulemuste funktsionaalsus ÕIS-is</h2>
             <p>Siit vahelehelt saad lugeda TÜ õppetulemuste vahelehe kasutamise kohta ÕIS-is ning kõike sellega seonduvat.</p>
+        
+            <ul class="page-list">
+                <li><strong>Õppetulemuste kuvamine:</strong> Vaata oma õppetulemusi!</li>
+                <li><strong>Hinnete ja punktide vaatamine</strong> Vaata oma hindeid ja punkte!</li>
+                <li><strong> Terviklik ülevaade</strong> Saa oma õppetulemustest terviklik ülevaade!</li>
+            </ul>
         </div>
-    </div>
-</div>
-
+     </div>
+   </div>
+</section>
+        
 {% endblock %}

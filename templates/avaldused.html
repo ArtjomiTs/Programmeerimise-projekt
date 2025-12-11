@@ -3,16 +3,30 @@
 {% block title %}Avaldused{% endblock %}
 
 {% block content %}
-<h1>Avaldused</h1>
 
-<div class="avaldused-container">
-    <img src="{{url_for('static', filename='images/avaldused.png') }}"
-            alt="Avalduste ikoon" class="avaldused-image">
+<section class="page-content">
+    <div class="page-card">
+
+        <div class="page-header">
+            <h1>Avaldused</h1>
+        </div>
+
+        <div class="page-body">
+
+            <img src="{{url_for('static', filename='images/avaldused.png') }}" alt="Avalduste ikoon" class="avaldused-image">
     
-    <div class="avaldused-info">
-        <h2>Avaldused ÕIS-is</h2>
-        <p>Siit vahelehelt leiad kõik avalduste esitamisega seonduva ÕIS-is<p>
+            <div class="page-info">
+                <h2>Avaldused ÕIS-is</h2>
+                <p>Siit vahelehelt leiad kõik avalduste esitamisega seonduva ÕIS-is<p>
+            
+                <ul class="page-list">
+                    <li><strong>Avalduste esitamine:</strong> ÕIS-is saad esitada erinevaid avaldusi, nagu õppimise katkestamine, vabade ainete registreerimine jne.</li>
+                    <li><strong>Avalduste vormid:</strong> Kõik vajalikud vormid, mida saab täita ja esitada ÕIS-is.</li>
+                    <li><strong>Avalduste vaatamine ja jälgimine:</strong> Sa saad jälgida oma esitatud avalduste staatust ÕIS-is ja vaadata nende olekut.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div> 
-
+</section>    
+  
 {% endblock %}

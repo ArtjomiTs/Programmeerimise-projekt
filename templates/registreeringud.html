@@ -3,16 +3,29 @@
 {% block title %}Registreeringud{% endblock %}
 
 {% block content %}
-<h1>Registreeringud</h1>
 
-<div class="registreeringud-container">
-    <img src="{{url_for('static', filename='images/registreeringud.png') }}"
-            alt="Registreeringute ikoon" class="registreeringud-image">
+<section class="page-content">
+    <div class="page-card">
+        
+        <div class="page-header">    
+            <h1>Registreeringud</h1>
+        </div>
 
-    <div class="registreeringud-info">
-        <h2>Registreeringud ÕIS-is</h2>
-        <p>Siit vahelehelt leiad kõik ÕIS-i registreeringute vahelehega seonduva.</p>
+        <div class="page-body">
+    
+        <img src="{{url_for('static', filename='images/registreeringud.png') }}" alt="Registreeringute ikoon" class="registreeringud-image">
+
+        <div class="page-info">
+            <h2>Registreeringud ÕIS-is</h2>
+            <p>Siit vahelehelt leiad kõik ÕIS-i registreeringute vahelehega seonduva.</p>
+
+            <ul class="page-list">
+                <li><strong>Registreeri</strong> Registreeri ennast kontrolltöödele!</li>
+                <li><strong>Registreeri</strong> Registreeri ennast eksamitele!</li>
+            </ul>
+        </div>
     </div>
 </div>
-
+</section>
+ 
 {% endblock %}

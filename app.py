@@ -104,8 +104,8 @@ def chatbot():
 # /// API vastus kasutaja sõnumile
 @app.route('/get_response', methods=['POST'])
 def get_response():
-    user_input = request.form['message']
-    response = chatbot_response(user_input)
+    feedback_message = request.form['feedback']
+    response = chatbot_response(feedback_message)
     return jsonify({'response' : response})
 
 if __name__ == '__main__':

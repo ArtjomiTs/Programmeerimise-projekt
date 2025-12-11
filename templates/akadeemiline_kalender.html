@@ -3,19 +3,33 @@
 {% block title %}Akadeemiline kalender{% endblock %}
 
 {% block content %}
-<h1>Akadeemiline kalender</h1>
 
-<div class="akadeemiline-container">
-    <img src="{{url_for('static', filename='images/akadeemiline1.png') }}"
-            alt="Akadeemiline ikoon" class="akadeemiline-image">
+<section class="page-content">
+    <div class="page-card">
 
-    <img src="{{url_for('static', filename='images/akadeemiline2.png') }}"
-            alt="Akadeemiline ikoon" class="akadeemiline-image">
+        <div class="page-header">
+            <h1>Akadeemiline kalender</h1>
+        </div>
 
-    <div class="akadeemiline-info">
-        <h2>Akadeemiline kalender ÕIS-is</h2>
-        <p>Sellelt vahelehelt leiad kogu info akadeemilise kalendri kohta ÕIS-is.</p>
+        <div class="akadeemiline-container">
+
+            <img src="{{url_for('static', filename='images/akadeemiline1.png') }}" alt="Akadeemiline ikoon" class="akadeemiline-image">
+
+            <img src="{{url_for('static', filename='images/akadeemiline2.png') }}" alt="Akadeemiline ikoon" class="akadeemiline-image">
+        </div>
+    
+        <div class="page-info">
+            <h2>Akadeemiline kalender ÕIS-is</h2>
+            <p>Sellelt vahelehelt leiad kogu info akadeemilise kalendri kohta ÕIS-is.</p>
+            
+            <ul class="page-list">
+                    <li><strong>Akadeemilised tähtajad:</strong> ÕIS-is saad vaadata kõiki olulisi akadeemilisi tähtaegu, nagu semestrite algus, eksamid jne.</li>
+                    <li><strong>Ülikooli vabad päevad:</strong> Kalendrist on võimalik näha ülikooli puhkepäevi ja teisi olulisi ajavahemikke.</li>
+                    <li><strong>Õppekavade ja eksamite ajakava:</strong> ÕIS-is saad tutvuda oma õppekavade ja eksamite täpsete kuupäevadega.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
 {% endblock %}

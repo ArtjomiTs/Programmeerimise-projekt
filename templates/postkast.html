@@ -3,18 +3,27 @@
 {% block title %}Postkast{% endblock %}
 
 {% block content %}
-<h1>Postkast</h1>
 
-<div class="postkast-card">
-    <div class="postkast-container">
-        <img src="{{url_for('static', filename='images/postkast.png') }}"
-            alt="Postkasti ikoon" class="postkast-image">
+<section class="page-content">
+    <div class="page-card">
+        <div class="page-header">
+            <h1>Postkast</h1>
+        </div>
 
-        <div class="postkast-info">
-            <h2>Postkasti funktsionaalsus ÕIS-is</h2>
-            <p>Siit vahelehelt saad lugeda TÜ postkasti kasutamise kohta ning kõike sellega seonduvat.</p>
+        <div class="page-body">
+            <img src="{{url_for('static', filename='images/postkast.png') }}"
+                alt="Postkasti ikoon" class="postkast-image">
+
+            <div class="page-info">
+                <h2>Postkasti funktsionaalsus ÕIS-is</h2>
+                <p>Siit vahelehelt saad lugeda TÜ postkasti kasutamise kohta ning kõike sellega seonduvat.</p>
+                <ul class="page-list">
+                    <li><strong>Postkast</strong> – ehk sinu Ülikooli e-mail.</li> 
+                    <li><strong>Postkasti juurde pääsemine</strong> – Postkasti saad liikuda ÕIS-is vajutades nupule "Postkast".</li>
+                    <li><strong>Postkastiga seotud teavitused</strong> – Kõik olulised teated ja teavitused saadetakse postkasti.</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div> 
-
+</section>
 {% endblock %}

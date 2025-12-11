@@ -4,14 +4,16 @@
 
 {% block content %}
 
-<h1>Profiil</h1>
+<section class="page-content">
+    <div class="page-card">
+        <div class="page-header">
+            <h1>Profiil</h1>
+        </div>
 
-<div class="profile-card">
-    <div class="profile-container">
-        <img src="{{ url_for('static', filename='images/profiil.png') }}"
-            alt="Profiili pilt" class="profile-image">
+    <div class="page-body">
+        <img src="{{ url_for('static', filename='images/profiil.png') }}" alt="Profiili pilt" class="profile-image">
 
-        <div class="profile-info">
+        <div class="page-info">
             <h2>Kasutaja Profiil</h2>
             <p>Siit vahelehelt leiad kogu vajaliku informatsiooni ÕIS-i profiililt.</p>
         </div>

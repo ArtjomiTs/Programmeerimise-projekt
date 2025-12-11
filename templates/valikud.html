@@ -3,16 +3,30 @@
 {% block title %}Valikud õppekavas{% endblock %}
 
 {% block content %}
-<h1>Valikud õppekavas</h1>
 
-<div class="valikud-container">
-    <img src="{{url_for('static', filename='images/valikud.png') }}"
-            alt="Valikute ikoon" class="valikud-image">
+<section class="page-content">
+    <div class="page-card">
+
+        <div class="page-header">
+            <h1>Valikud õppekavas</h1>
+        </div>
+
+        <div class="page-body">
             
-    <div class="valikud-info">
-        <h2>Valikud õppekavas ÕIS-is</h2>
-        <p>Siit vahelehelt saad lugeda TÜ kalendri kasutamise kohta ÕIS-is ning kõike sellega seonduvat.</p>
-    </div> 
-</div>
+            <img src="{{url_for('static', filename='images/valikud.png') }}" alt="Valikute ikoon" class="valikud-image">
+            
+            <div class="page-info">
+                <h2>Valikud õppekavas ÕIS-is</h2>
+                <p>Siit vahelehelt saad lugeda TÜ kalendri kasutamise kohta ÕIS-is ning kõike sellega seonduvat.</p>
 
+                <ul class="page-list">
+                    <li><strong>Õppekava valikud:</strong> Näed oma õppekava valikainete loetelu ja saad valida oma aineid ÕIS-is.</li>
+                    <li><strong>Valikainete muudatused:</strong> Kui on muudatused, siis neid saab teha ÕIS-is vastavalt akadeemilistele nõudmistele.</li>
+                    <li><strong>Õppeperioodi valikud:</strong> Valikute tegemine erinevates õppeperioodides, nagu semestrid ja kursused.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+  
 {% endblock %}

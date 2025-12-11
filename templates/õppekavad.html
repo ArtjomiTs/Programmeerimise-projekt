@@ -3,16 +3,30 @@
 {% block title %}Õppekavad{% endblock %}
 
 {% block content %}
-<h1>Õppekavad</h1>
 
-<div class="õppekavad-container">
-    <img src="{{url_for('static', filename='images/õppekavad.png') }}"
-            alt="Õppekavade ikoon" class="õppekavad-image">
+<section class="page-content">
+    <div class="page-card">
 
-    <div class="õppekavad-info">
-        <h2>Õppekavad ÕIS-is</h2>
-        <p>Sellelt vahelehelt leiad kõik õppekavade vaatamise kohta ÕIS-is.</p>
+        <div class="page-header">
+            <h1>Õppekavad</h1>
+        </div>
+
+        <div class="page-body">
+    
+            <img src="{{url_for('static', filename='images/õppekavad.png') }}" alt="Õppekavade ikoon" class="õppekavad-image">
+
+            <div class="page-info">
+                <h2>Õppekavad ÕIS-is</h2>
+                <p>Sellelt vahelehelt leiad kõik õppekavade vaatamise kohta ÕIS-is.</p>
+  
+                <ul class="page-list">
+                    <li><strong>Õppekavade vaatamine:</strong> ÕIS-is saad vaadata kõiki oma õppekavasid, nende aineid ja tähtaegu.</li>
+                    <li><strong>Õppekavade muutmine:</strong> ÕIS-is saad teha muudatusi oma õppekavades, näiteks valida õppeaineid või muuta õppekava struktuuri.</li>
+                    <li><strong>Õppekavade teavitused:</strong> Kõik õppekavade muudatused või täiendavad teated kuvatakse ÕIS-is.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-</div>
-
+</section>
+    
 {% endblock %}
