@@ -10,24 +10,49 @@
 <form method="POST">
     <div style="margin-bottom: 20px;">
         <p>1.Mis on kõige olulisem asi, mille leiad ÕIS-is profiili alt?</p>
-        <input type="text" name="q1" placeholder="Sisesta vastus..." class="vastus-input"><br><br>
+        <input type="text" name="q1" placeholder="Sisesta vastus (1 sõna)..." class="vastus-input"><br><br>
     </div>
 
     <div style="margin-bottom: 20px;">
         <p>2.Mille saad veel lisada ÕIS-is profiili alt?</p>
-        <input type="text" name="q2" placeholder="Sisesta vastus..." class="vastus-input"><br><br>
+        <input type="text" name="q2" placeholder="Sisesta vastus (1 sõna)..." class="vastus-input"><br><br>
     </div>
 
     <div style="margin-bottom: 20px;">
         <p>3.Millisel vahelehel ÕIS-is asub otsetee ülikooli postkasti?</p>
-        <input type="text" name="q3" placeholder="Sisesta vastus..." class="vastus-input"><br><br>
+        <input type="text" name="q3" placeholder="Sisesta vastus(1 sõna)..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>4.Sisesta vahelehe nimi ÕIS-is, kust näed kõiki oma aegu (eksamid, kontrolltööd, konsultatsioonid, praktikumid, loengud)</p> 
+        <input type="text" name="q4" placeholder="Sisesta vastus(1 sõna)..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>5. Sisesta vahelehe nimi ÕIS-is, kust näed oma õppetulemusi<p>
+        <input type="text" name="q5" placeholder="Sisesta vastus(1 sõna)..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>6. Milliselt vahelehelt ÕIS-is saad registreerida ennast nii eksamitele kui ka kontrolltöödele?<p>
+        <input type="text" name="q6" placeholder="Sisesta vastus(1 sõna)..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>7. Milliselt vahelehelt ÕIS-is saad registreerida ennast ainetesse?<p>
+        <input type="text" name="q7" placeholder="Sisesta vastus(1 sõna)..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p> 8. Milliselt vahelehelt ÕIS-is saad valida ning näha oma valikainete loetelu?<p>
+        <input type="text" name="q8" placeholder="Sisesta vastus(1 sõna)..." class="vastus-input"><br><br>
     </div>
 
     <button type="submit" class="küsimustik-button">Kontrolli</button>
 </form>
 
 {% if tulemus is defined %}
-    <h3>Tulemus: {{ tulemus }} / 3</h3>
+    <h3>Tulemus: {{ tulemus }} / 8</h3>
 {% endif %}
 
 {% endblock %}

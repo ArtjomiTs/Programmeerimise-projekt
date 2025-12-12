@@ -97,6 +97,11 @@ def kontroll():
         q1 = request.form.get("q1", "").lower()
         q2 = request.form.get("q2", "").lower()
         q3 = request.form.get("q3", "").lower()
+        q4 = request.form.get("q4", "").lower()
+        q5 = request.form.get("q5", "").lower()
+        q6 = request.form.get("q6", "").lower()
+        q7 = request.form.get("q7", "").lower()
+        q8 = request.form.get("q8", "").lower()
 
         if "martikkel" in q1:
             tulemus += 1
@@ -104,7 +109,17 @@ def kontroll():
             tulemus += 1
         if "avaleht" in q3:
             tulemus += 1
-
+        if "kalender" in q4 or "minu kalender" in q4:
+            tulemus += 1
+        if "õppetulemused" in q5:
+            tulemus += 1
+        if "registreeringud" in q6:
+            tulemus += 1
+        if "õppeained" in q7:
+            tulemus += 1
+        if "õppekavad" in q8:
+            tulemus += 1
+    
     return render_template("kontroll.html", tulemus=tulemus)
     
         
