@@ -1,0 +1,442 @@
+section {
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 35px;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  
+}
+
+.page-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  
+} 
+
+.page-header {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.page-body {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Pildid avalehel ja vahelehtedel */
+.page-image {
+  max-width: 220px;
+  height: auto;
+  border-radius: 12px;
+}
+/* Tekst avalehel ja vahelehtedel */
+.page-info {
+  flex: 1;
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+.page-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.page-list {
+  font-size: 1.25rem;
+  line-height: 1.9;
+  margin-top: 25px; 
+}
+
+.page-list li {
+  margin-bottom: 14px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url('../images/taust2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    line-height: 1.15;
+    overflow-x: hidden; /* Et ei oleks lehe paremale/vasakule scrolli */
+}
+
+header {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    color: white;
+    padding: 8px 20px;
+    box-shadow: 0 0px 15px white;
+    border-radius: 0px;
+     
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px white;
+    padding: 5px 0;
+    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    color: white;
+    position: relative;
+    top: 40px;
+}
+
+nav {
+    margin: 0;
+    font-size: 1.9rem;
+    padding: 5px 0;
+}
+
+nav li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 10px;
+}
+
+nav a[href="{{ url_for('avaleht') }}"] {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #39FF14;
+    color: black;
+    padding: 8px 18px;
+    border-radius: 20px;
+    box-shadow: 0 0 6px #39FF14, 0 0 20px #39FF14;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+nav a[href="{{ url_for('avaleht') }}"]:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 15px #39FF14, 0 0 30px #39FF14;
+}
+/* Põhisisu */ 
+main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    background-color: white;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 0px;
+    box-shadow: 0 0px 10px white;
+    text-align: left;
+    color: gray;
+}
+
+/* Tagasiside nupp */
+.feedback-button {
+    position: relative;
+    left: 50px;
+    bottom: 70px;
+    background-color: black;
+    color: white;
+    padding: 15px 25px;
+    font-size: 2rem;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0px 15px gray;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s; /* Sujuv üleminek */
+}
+
+.feedback-form {
+    display:flex;
+    flex-direction: column;
+    color: black;
+}
+
+.feedback-form label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-form textarea {
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 15px;
+    border: 1px solid black;
+    resize: vertical;
+}
+
+.feedback-form button {
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    position: relative;
+    
+}
+
+.feedback-form button:hover {
+    background-color: #3b6d6f;
+}
+
+footer {
+    text-align: right;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    color: white;
+    border-radius: 0px;
+    font-size: 1.2rem;
+    box-shadow: 0 0px 15px white;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px white;
+    
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    z-index: 9999;
+}
+
+.dropbtn {
+    text-decoration: none; /* Eemaldab kriipsu teksti alt */
+    background-color: black;
+    color: white;
+    padding: 10px 16px;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 12px gray;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px rgba(0,255,0,0.35);
+    animation: dropdownFade 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    color: gray;
+    font-weight: 100;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(57,255,20,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #2c5daa;
+}
+/* et lingid oleksid drop-down menüüs üksteise all */
+.dropdown-content li {
+    width: 100%;
+}
+
+@keyframes dropdownFade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Avalehe tekst */
+.pealkiri1-tekst {
+  font-size: 35px;
+  margin-top: 5px;
+}
+
+.pealkiri-tekst {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.sissejuhatus-tekst {
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.info-box {
+  font-size: 15px;
+  margin-top: 500px;
+  padding: 30px;
+  margin: 50px auto;
+  background-color: gray;
+  color: black;
+}
+
+.autorite-list {
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+.avaleht-btn {
+  text-decoration: none; /* Eemaldab kriipsu teksti alt */
+  position: relative;
+  bottom: 15px;
+  left: 2100px;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0px 15px gray;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+
+}
+
+.kontrolli-button {
+    position: relative;
+    bottom: 1px;
+    left: 960px;
+    background-color: orange;
+    color: white;
+    padding: 15px 25px;
+    font-size: 35px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0px 0px orange;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    z-index: 1000; /* Et oleks üle teiste elementide */
+}
+
+.kontrolli-button:hover {
+    background-color: black;
+    transform: scale(1.1);
+}
+/* Profiili vahelehe pilt */
+.profile-image {
+  width: 100%;
+  max-width: 1700px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 30px;
+}
+
+.kalender-image {
+  max-width: 1200px;
+}
+.postkast-image {
+  max-width: 1200px;
+}
+
+.vastus-input {
+  width: 900px;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid purple;
+}
+
+.küsimustik-button {
+
+background-color: black;
+color: orange;
+padding: 10px 20px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+
+.fade-message { opacity: 0; transition: opacity 0.5s; }
+.fade-message.show { opacity: 1; }
+
+/* Olulise tähtaegade kast */
+.külje-box {
+  background: gray;
+  border: 0px solid black; 
+  border-radius: 0px;
+  padding: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  margin-left: 0;
+  color: white;
+  box-shadow: 0 0px 10px white;
+}
+
+.külje-box h2 {
+  font-size: 1.8rem;
+  color: black;
+  margin-bottom: 15px;
+
+}
+
+.külje-box ul {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  padding-left: 20px;
+
+}
+
+.külje-box li {
+  margin-bottom: 5px;
+
+}
+
+.aasta-pilt {
+  text-align: left;
+  margin: 60px 0;
+}
+
+.aasta-pilt img {
+  max-width: 90%;
+  width: auto;
+  height: auto;
+  max-height: 400px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+
+}
+
+.aasta-pilt img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px black;
+
+}
