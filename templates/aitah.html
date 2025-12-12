@@ -3,11 +3,21 @@
 {% block title %}Aitäh tagasiside eest!{% endblock %}
 
 {% block content %}
-<h2>Sinu tagasiside on saadetud!</h2>
+<section class="page-content">
+    <div class="page-card">
+        
+        <div class="page-header">Aitäh tagasiside eest!</div>
+        <div class="page-body">
+            <div class="page-info">    
 
-<p>Täname, et võtsid aega oma mõtteid jagada. See aitab meil ÕIS-i paremaks muuta.</p>
+            <h2>Sinu tagasiside on saadetud!</h2>
+            <p>Täname, et võtsid aega oma mõtteid jagada! See aitab meil veebilehte paremaks muuta.</p>
+            
+            <!-- Nupp tagasi avalehele -->
+            <a href="{{ url_for('avaleht') }}" class="avaleht-btn">Tagasi avalehele</a>
+         </div>
+      </div>
+   </div>
+</section>
 
-<p>
-    <a href="{{ url_for('avaleht') }}">Tagasi avalehele</a>
-</p>
 {% endblock %}

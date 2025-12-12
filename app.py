@@ -30,6 +30,11 @@ def tagasiside():
     if request.method == 'POST':
         feedback_message = request.form['feedback']
         print('Kasutaja tagasiside:', feedback_message)
+
+        # /// Salvestame tagasiside faili "tagasiside.txt"
+        with open("tagasiside.txt", "a", encoding="utf-8") as f:
+            f.write(feedback_message + "\n") # /// Iga kasutaja sisestatud tagasiside salvestatakse uuele reale
+
         return redirect(url_for('aitah'))
     return render_template('tagasiside.html')
 
