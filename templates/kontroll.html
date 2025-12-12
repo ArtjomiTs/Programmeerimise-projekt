@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Kontrolli oma teadmisi{% endblock %}
+
+{% block content %}
+<h2>Kontrolli oma teadmisi</h2>
+
+<p><em>Küsitlus hakkab siin...</em></p>
+
+<form method="POST">
+    <div style="margin-bottom: 20px;">
+        <p>1.Mis on kõige olulisem asi, mille leiad ÕIS-is profiili alt?</p>
+        <input type="text" name="q1" placeholder="Sisesta vastus..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>2.Mille saad veel lisada ÕIS-is profiili alt?</p>
+        <input type="text" name="q2" placeholder="Sisesta vastus..." class="vastus-input"><br><br>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>3.Millisel vahelehel ÕIS-is asub otsetee ülikooli postkasti?</p>
+        <input type="text" name="q3" placeholder="Sisesta vastus..." class="vastus-input"><br><br>
+    </div>
+
+    <button type="submit" class="küsimustik-button">Kontrolli</button>
+</form>
+
+{% if tulemus is defined %}
+    <h3>Tulemus: {{ tulemus }} / 3</h3>
+{% endif %}
+
+{% endblock %}

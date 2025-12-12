@@ -3,11 +3,21 @@
 {% block title %}ÕIS-i tutvustus{% endblock %}
 
 {% block content %}
+
 <h2 class="pealkiri1-tekst">Tere tulemast õppeinfosüsteemi tutvustavale lehele!</h2>
 
 <p class="pealkiri-tekst">See veebileht käistleb ÕIS-i kasutamist ning ÕIS-i poolt pakutavaid võimalusi.</p>
 
 <p class="sissejuhatus-tekst">Vajuta menüüle, et liikuda erinevate ÕIS-i tutvustavate vahelehtede vahel.</p>
+
+<p class="sissejuahtus-tekst"> Lehe koostamisel on veebilehe autorid eelkõige pannud rõhku võimalikult kasutajasõbraliku keskkonna loomisele.</p>
+
+<p class="sissejuhatus-tekst"> Avalehelt leiad ka teadmiste kontrollimiseks eraldi veebilehe autorite poolt koostatud testi!</p>
+
+<p class="sissejuhatus-tekst"> Antud veebileht on loodud programmeerimise alused kursuse raames.</p>
+
+<div class="aasta-pilt">
+    <img src="{{ url_for('static', filename='images/aasta.png') }}" alt="Aasta">
 
 <div class="info-box">
     <h3>Lehe autorid</h3>
@@ -16,6 +26,10 @@
         <li>Mihkel Tomson</li>
         <li>Artjom Tšerkassov</li>
     </ul>
+    <!-- Kontrolli nupp -->
+     <button class="kontrolli-button" onclick="window.location.href='{{ url_for('kontroll') }}'">
+        Kontrolli teadmisi!
+     </button>
   </div>
 </div>
 {% endblock %}

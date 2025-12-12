@@ -84,29 +84,29 @@ def õppekavad():
 def akadeemiline_kalender():
     return render_template('akadeemiline_kalender.html')
 
-
-# /// Algne chatbot funktsioon
-def chatbot_response(user_input):
-    user_input = user_input.lower()
-
-    if "tere" in user_input or "hello" in user_input:
-        return "Tere! Kuidas saan aidata?"
-    elif "aitäh" in user_input:
-        return "Pole tänu väärt!"
-    else:
-        return "Vabandust, ma ei saa sellest aru. Proovi teist küsimust."
     
-# /// Chatboti leht
-@app.route('/chatbot')
-def chatbot():
-    return render_template('chatbot.html')
+# /// Kontrolli leht
 
-# /// API vastus kasutaja sõnumile
-@app.route('/get_response', methods=['POST'])
-def get_response():
-    feedback_message = request.form['feedback']
-    response = chatbot_response(feedback_message)
-    return jsonify({'response' : response})
+@app.route("/kontroll", methods=["GET", "POST"])
+def kontroll():
+    tulemus = None
 
+    if request.method == "POST":
+        tulemus = 0
+
+        q1 = request.form.get("q1", "").lower()
+        q2 = request.form.get("q2", "").lower()
+        q3 = request.form.get("q3", "").lower()
+
+        if "martikkel" in q1:
+            tulemus += 1
+        if "isikuandmed" in q2 or "kontonumber" in q2:
+            tulemus += 1
+        if "avaleht" in q3:
+            tulemus += 1
+
+    return render_template("kontroll.html", tulemus=tulemus)
+    
+        
 if __name__ == '__main__':
     app.run(debug=True)

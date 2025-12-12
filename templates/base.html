@@ -23,15 +23,16 @@
 </div>
 
 <header>
+
     <h1>ÕIS-i tutvustav rakendus</h1>
 
     <nav>
         <ul class="menu">
-             <li><a href="{{ url_for('avaleht') }}" class="avaleht-btn">Avaleht</a></li>
+             <li><a href="{{ url_for('avaleht') }}" class="avaleht-btn">Avalehele</a></li>
                 
              <!-- Dropdown menüü -->
             <li class="dropdown">
-                <a href="#" class="dropbtn">ÕIS<IS></IS>&#9776;</a>
+                <a href="#" class="dropbtn">Menüü<IS></IS>&#9776;</a>
                 <ul class="dropdown-content">
                     <li><a href="{{ url_for('profiil') }}">Profiil</a></li>
                     <li><a href="{{ url_for('postkast') }}">Postkast</a></li>
@@ -51,15 +52,25 @@
       
         <!-- Tagasiside link -->
     <button class="feedback-button" onclick="window.location.href='{{ url_for('tagasiside') }}'">
-        Anna meile tagasisidet!
+        Jäta meile tagasisidet!
     </button>
-
-    <!-- Chatbot nupp -->
-     <button class="chatbot-button" onclick="window.location.href='{{ url_for('chatbot') }}'">
-        Chatbot
-     </button>
 </header>
-       
+
+{% if request.endpoint == 'avaleht' %} <!-- Et semestri tähtsate kuupäevade kast oleks ainult avalehel -->
+<section class="külje-box">
+    <h2>Esimese semestri tähtsad kuupäevad 2025/26 õppeaastal</h2>
+
+    <ul>
+        <li><strong>15.09.25 23.59</strong> - Õppeainetesse registreerumise tähtaeg esmakursuslastele</li>
+        <li><strong> 15.09.25 23.59</strong> - Õppekulude hüvitamisest vabastuse taotlemise tähtaeg sügissemestril</li>
+        <li><strong> 20.10.25 23.59</strong> -  Õppetasu maksetähtaeg sügissemestril (maksekohustusega üliõpilastele)</li>
+        <li><strong> 15.12 21.00</strong> - Kevadsemestri õppeainetesse registreerimise algus</li>
+        <li><strong> 8.02 23.59</strong> - Bakalaureuseõppe peaeriala moodulite ja teiste õppeastmete moodulite valimise tähtaeg (kui on valitavaid mooduleid)</li>
+        <li><strong> 8.02.23.59</strong> - Kevadsemestri õppeainetesse registreerumise tähtaeg</li>
+    </ul>
+</section>
+{% endif %}
+     
 <main>
     {% block content %}
     <!-- Siia läheb teiste vahelehtede/alamlehtede põhisisu-->
