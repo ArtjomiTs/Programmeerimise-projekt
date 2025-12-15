@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}KKK {% endblock %}
+
+{% block content %}
+
+<section class="külje-box">
+    <h2>Korduma kippuvad küsimused (KKK)</h2>
+
+    <form method="get" style="margin-bottom: 20px; text-align: center;">
+        <input type="text" name="q" placeholder="Otsi küsimust või vastust" style="width: 80%; padding: 12px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;">
+        <button type="submit" style="padding: 12px 20px; font-size: 16px; border-radius: 5px; border: none; background-color: #0072c6; color: white; cursor: pointer;">Otsi</button>
+    </form>
+
+    {% if kkk %}
+        {% for item in kkk %}
+        <details style="margin-bottom: 10px;">
+            <summary>
+                <strong>{{ item.küsimus }}</strong>
+                <em>({{ item.kategooria }})</em>
+            </summary>
+            <p>{{ item.vastus }}</p>
+        </details>
+    {% endfor %}
+{% else %}
+        <p>KKK küsimusi ei leitud.</p>
+    {% endif %}
+
+    <!-- Nupp mine admini vaatesse -->
+     <div style="text-align: center; margin-top: 20px;">
+        <button onclick="window.location.href='{{ url_for('admin_login') }}'"
+             style="margin-top: 10px; padding: 10px 15px; font-size: 16px; background-color: #444; color: white; border: none; cursor: pointer;">
+        Mine admini vaatesse
+    </button>
+   </div>
+ </section>
+{% endblock %}
+

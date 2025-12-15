@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %} Admin login {% endblock %}
+
+{% block content %}
+
+<section class="külje-box" style="max-width: 400px; margin: 50px auto; padding: 20px; background-color: black; border-radius: 10px;">
+    <h2>Admini sisselogimine</h2>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul style="color:red;">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+               {% endfor %}
+            </ul>
+           {% endif %}
+        {% endwith %}
+
+        <form method="post">
+            <label>Parool:</label><br>
+            <input type="password" name="parool" required style="width:100%; padding:8px; margin-top:5px;"><br><br>
+            <button type="submit" style="padding:8px 15px; background-color:#0077cc; color:white; border:none; border-radius:5px;">Logi sisse</button>
+        </form>
+    </section>
+
+    {% endblock %}                 

@@ -3,7 +3,10 @@ section {
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+p, li, span, div {
+  text-shadow: none;
 }
 
 .page-content {
@@ -71,14 +74,9 @@ section {
 }
 
 html, body {
-    background-image: url('../images/taust2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 100%;
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     margin: 0;
     padding: 0;
     color: #333;
@@ -92,12 +90,21 @@ html, body {
 header {
     position: relative;
     width: 100%;
-    background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
+    background-color: transparent;
     color: white;
-    padding: 8px 20px;
+    padding: 50px 60px;
     box-shadow: 0 0px 15px white;
     border-radius: 0px;
-     
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+.header-buttons {
+  display: flex;
+  gap: 30px;
+  align-items: center;
 }
 
 header h1 {
@@ -105,7 +112,7 @@ header h1 {
     margin: 0;
     font-size: 2.1rem;
     letter-spacing: 1px;
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 5px white;
     padding: 5px 0;
     background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
     color: white;
@@ -128,17 +135,17 @@ nav li {
 nav a[href="{{ url_for('avaleht') }}"] {
     font-size: 1.2rem;
     font-weight: bold;
-    background-color: #39FF14;
+    background-color: white;
     color: black;
     padding: 8px 18px;
     border-radius: 20px;
-    box-shadow: 0 0 6px #39FF14, 0 0 20px #39FF14;
+    box-shadow: 0 0 6px white, 0 0 20px white;
     transition: transform 0.2s, box-shadow 0.3s;
 }
 
 nav a[href="{{ url_for('avaleht') }}"]:hover {
     transform: scale(1.07);
-    box-shadow: 0 0 15px #39FF14, 0 0 30px #39FF14;
+    box-shadow: 0 0 15px white, 0 0 30px white;
 }
 /* Põhisisu */ 
 main {
@@ -148,24 +155,24 @@ main {
     background-color: white;
     margin: 2rem auto;
     padding: 2rem;
-    border-radius: 0px;
-    box-shadow: 0 0px 10px white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: left;
-    color: gray;
+    color: rgba(195, 128, 3, 0.977);
 }
 
 /* Tagasiside nupp */
 .feedback-button {
     position: relative;
-    left: 50px;
-    bottom: 70px;
+    right: 200px;
+    top: 0px;
     background-color: black;
     color: white;
     padding: 15px 25px;
     font-size: 2rem;
     border-radius: 12px;
     border: none;
-    box-shadow: 0 0px 15px gray;
+    box-shadow: 0 0px 15px white;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s; /* Sujuv üleminek */
 }
@@ -214,30 +221,15 @@ footer {
     color: white;
     border-radius: 0px;
     font-size: 1.2rem;
-    box-shadow: 0 0px 15px white;
+    box-shadow: 0 1px 10px white;
     letter-spacing: 1px;
     text-shadow: 0 0 10px white;
     
 }
 
 .dropdown {
-    position: absolute;
-    top: 50px;
-    right: 40px;
-    z-index: 9999;
-}
-
-.dropbtn {
-    text-decoration: none; /* Eemaldab kriipsu teksti alt */
-    background-color: black;
-    color: white;
-    padding: 10px 16px;
-    font-size: 30px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 12px gray;
-    transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+ 
 }
 
 .dropdown-content {
@@ -245,7 +237,7 @@ footer {
     position: absolute;
     right: 0;
     background-color: white;
-    border: 1px solid gray;
+    border: 1px solid purple;
     border-radius: 10px;
     min-width: 240px;
     box-shadow: 0px 8px 16px rgba(0,255,0,0.35);
@@ -258,7 +250,7 @@ footer {
     padding: 12px 16px;
     display: block;
     text-decoration: none;
-    color: gray;
+    color: purple;
     font-weight: 100;
     transition: background-color 0.2s, padding-left 0.2s;
 }
@@ -295,9 +287,13 @@ footer {
   margin-top: 10px;
 }
 
-.sissejuhatus-tekst {
+.sissejuhatus-tekst, .pealkiri-tekst {
   font-size: 20px;
-  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.pealkiri1-tekst {
+  margin-bottom: 30px;
 }
 
 .info-box {
@@ -305,7 +301,7 @@ footer {
   margin-top: 500px;
   padding: 30px;
   margin: 50px auto;
-  background-color: gray;
+  background-color: lightblue;
   color: black;
 }
 
@@ -315,32 +311,17 @@ footer {
   text-align: left;
 }
 
-.avaleht-btn {
-  text-decoration: none; /* Eemaldab kriipsu teksti alt */
-  position: relative;
-  bottom: 15px;
-  left: 2100px;
-  font-size: 30px;
-  background-color: black;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 12px;
-  box-shadow: 0 0px 15px gray;
-  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
-
-}
-
 .kontrolli-button {
     position: relative;
     bottom: 1px;
     left: 960px;
-    background-color: orange;
+    background-color: green;
     color: white;
     padding: 15px 25px;
     font-size: 35px;
     border-radius: 12px;
     border: none;
-    box-shadow: 0 0px 0px orange;
+    box-shadow: 0 0px 15px white;
     cursor: pointer;
     transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
     z-index: 1000; /* Et oleks üle teiste elementide */
@@ -388,21 +369,20 @@ cursor: pointer;
 
 /* Olulise tähtaegade kast */
 .külje-box {
-  background: gray;
-  border: 0px solid black; 
-  border-radius: 0px;
+  background: rgb(20, 20, 20);
+  border: 1px solid white; 
+  border-radius: 12px;
   padding: 25px;
   margin-top: 30px;
   margin-bottom: 30px;
   width: 100%;
   margin-left: 0;
   color: white;
-  box-shadow: 0 0px 10px white;
 }
 
 .külje-box h2 {
   font-size: 1.8rem;
-  color: black;
+  color: orange;
   margin-bottom: 15px;
 
 }
@@ -437,6 +417,23 @@ cursor: pointer;
 
 .aasta-pilt img:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 25px black;
+  box-shadow: 0 0 25px orange;
+
+}
+
+.top-btn {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 0px 15px gray;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.avalehe-oluline {
+  color: rgb(0, 204, 255);
+  font-weight: 600;
 
 }

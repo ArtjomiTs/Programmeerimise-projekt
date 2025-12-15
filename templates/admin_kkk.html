@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}KKK {% endblock %}
+
+{% block content %}
+
+<section class="külje-box" style="max-width: 800px; margin: 20px auto; padding: 20px; background-color: black; border-radius: 0 0 10px;">
+    <h2>KKK haldus(admin)</h2>
+
+    <!-- Logi välja nupp -->
+     <div style="text-align: right; margin-bottom: 20px;">
+        <button onclick="window.location.href='{{ url_for('admin_logout') }}'"
+                style="padding: 5px 10px; background-color: red; color: white; border: none; border-radius: 5px;">
+            Logi välja
+        </button>
+    </div>
+
+
+    <h3>Lisa uus küsimus</h3>
+    <form method="post" style="margin-bottom: 30px;">
+        <label>Küsimus:</label><br>
+        <input type="text" name="küsimus" required style="width: 100%; padding: 12px; font-size: 18px;"><br><br>
+
+        <label>Vastus:</label><br>
+        <textarea name="vastus" required style="width: 100%; height: 120px; padding: 12px; font-size: 18px;"></textarea><br><br>
+
+        <label>Kategooria:</label><br>
+        <input type="text" name="kategooria" required style="width: 100%; padding: 12px; font-size: 18px;"><br><br>
+
+        <button type="submit" style="padding: 12px 20px; font-size: 18px;">Lisa KKK</button>
+    </form>
+
+    <hr>
+
+    <h3>Olemasolevad küsimused</h3>
+    
+    {% for item in kkk %}
+        <div style="margin-bottom: 10px; border: 1px solid #ccc; padding: 8px; border-radius: 5px;">
+        <strong>{{ item.küsimus }}</strong> ({{ item.kategooria }})<br>
+            {{ item.vastus }}<br>
+
+    <!-- Kustuta nupp -->
+        <form method="post" action="{{ url_for('admin_kkk_delete', index=loop.index0) }}" style="display:inline;">
+            <button type="submit" onclick="return confirm('Kas oled kindel, et soovid kustutada?');">
+                Kustuta
+            </button>
+        </form>
+    </div>
+{% endfor %}
+ 
+{% endblock %}
+

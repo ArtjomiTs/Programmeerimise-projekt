@@ -15,7 +15,8 @@ järgneva töö käigus.
 
 
 
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, session, flash
+import os
 
 app = Flask(__name__)
 
@@ -126,7 +127,95 @@ def kontroll():
             tulemus += 1
     
     return render_template("kontroll.html", tulemus=tulemus)
+
+app.secret_key = "salajane_võti"
+
+ADMIN_PAROOL = "admin" 
+
+KKK_FAIL = "kkk.txt"
+
+def loe_kkk():
+    kkk = []
+    if os.path.exists(KKK_FAIL):
+        with open(KKK_FAIL, "r", encoding="utf-8") as f:
+            for rida in f:
+                osad = rida.strip().split("||")
+                if len(osad) == 3:
+                    kkk.append({
+                        "küsimus": osad[0],
+                        "vastus" : osad[1],
+                        "kategooria": osad[2]
+                    })
+    return kkk
+
+def lisa_kkk(küsimus, vastus, kategooria):
+    with open(KKK_FAIL, "a", encoding="utf-8") as f:
+        f.write(f"{küsimus}||{vastus}||{kategooria}\n")
+
+@app.route("/kkk")
+def kkk():
+    otsing = request.args.get("q", "").lower()
+    kkk_list = loe_kkk()
+
+    if otsing:
+        kkk_list = [
+            item for item in kkk_list
+            if otsing in item["küsimus"].lower()
+            or otsing in item["vastus"].lower()
+        ]
+    return render_template("kkk.html", kkk=kkk_list)
+
+@app.route("/admin/login", methods=["GET", "POST"])
+def admin_login():
+    if request.method == "POST":
+        parool = request.form.get("parool")
+        if parool == ADMIN_PAROOL:
+            session["admin_logged_in"] = True
+            return redirect(url_for("admin_kkk"))
+        else:
+            flash("Vale parool! Proovi uuesti.")
+            return redirect(url_for("admin_login"))
     
-        
+    return render_template("admin_login.html")
+
+@app.route("/admin/kkk", methods=["GET", "POST"])
+def admin_kkk():
+    if not session.get("admin_logged_in"):
+        return redirect(url_for("admin_login"))
+    
+    if request.method == "POST":
+        küsimus = request.form["küsimus"]
+        vastus = request.form["vastus"]
+        kategooria = request.form["kategooria"]
+        lisa_kkk(küsimus, vastus, kategooria)
+        return redirect(url_for("admin_kkk"))
+    
+    return render_template("admin_kkk.html", kkk=loe_kkk())
+
+@app.route("/admin/logout")
+def admin_logout():
+    session.pop("admin_logged_in", None)
+    flash("Oled välja logitud.")
+    return redirect(url_for("kkk"))
+
+# /// Flask route kustutamiseks
+@app.route("/admin/kkk/delete/<int:index>", methods=["POST"])
+def admin_kkk_delete(index):
+    if not session.get("admin_logged_in"):
+        return redirect(url_for("admin_login"))
+
+    kkk_list = loe_kkk()
+    if 0 <= index < len(kkk_list):
+        kkk_list.pop(index)
+        # Salvesta uuesti faili
+        with open(KKK_FAIL, "w", encoding="utf-8") as f:
+            for item in kkk_list:
+                f.write(f"{item['küsimus']}||{item['vastus']}||{item['kategooria']}\n")
+    return redirect(url_for("admin_kkk"))
+
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)

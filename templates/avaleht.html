@@ -10,7 +10,11 @@
 
 <p class="sissejuhatus-tekst">Vajuta menüüle, et liikuda erinevate ÕIS-i tutvustavate vahelehtede vahel.</p>
 
-<p class="sissejuahtus-tekst"> Lehe koostamisel on veebilehe autorid eelkõige pannud rõhku võimalikult kasutajasõbraliku keskkonna loomisele.</p>
+<p class="sissejuhatus-tekst">Õppeinfosüsteemi (ÕIS) leiad aadressilt <a href="https://ois2.ut.ee" class="avalehe-oluline" target="_blank">ois2.ut.ee</a></p>
+
+<p class="sissejuhatus-tekst">Õppeinfosüsteemi (ÕIS) sisenemiseks sisesta kasutajatunnus kujul:<br> Email: <span class="avalehe-oluline">eesnimiperenimi@ut.ee</span><br> Parool: <span class="avalehe-oluline">parool</span></p>
+
+<p class="sissejuhatus-tekst"> Lehe koostamisel on veebilehe autorid eelkõige pannud rõhku võimalikult kasutajasõbraliku keskkonna loomisele.</p>
 
 <p class="sissejuhatus-tekst"> Avalehelt leiad ka teadmiste kontrollimiseks eraldi veebilehe autorite poolt koostatud testi!</p>
 
@@ -18,6 +22,7 @@
 
 <div class="aasta-pilt">
     <img src="{{ url_for('static', filename='images/aasta.png') }}" alt="Aasta">
+</div>
 
 <div class="info-box">
     <h3>Lehe autorid</h3>
@@ -27,9 +32,9 @@
         <li>Artjom Tšerkassov</li>
     </ul>
     <!-- Kontrolli nupp -->
-     <button class="kontrolli-button" onclick="window.location.href='{{ url_for('kontroll') }}'">
+    <button class="kontrolli-button" onclick="window.location.href='{{ url_for('kontroll') }}';">
         Kontrolli teadmisi!
-     </button>
+    </button>
   </div>
-</div>
+
 {% endblock %}

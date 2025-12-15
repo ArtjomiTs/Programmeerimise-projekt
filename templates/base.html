@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ÕIS-i tutvustav rakendus{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/kujundus_langev_taust.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/kujundus_läbipaistev2.css') }}">
     {% block head %}{% endblock %}
 </head>
 <body>
@@ -28,11 +28,17 @@
 
     <nav>
         <ul class="menu">
-             <li><a href="{{ url_for('avaleht') }}" class="avaleht-btn">Avalehele</a></li>
-                
+             <li>
+                <a href="{{ url_for('avaleht') }}" class="top-btn avaleht-btn">Avalehele</a>
+            </li>
+
+            <li>
+                <a href="{{ url_for('kkk') }}" class="top-btn kkk-btn">KKK</a>
+            </li>
+        
              <!-- Dropdown menüü -->
             <li class="dropdown">
-                <a href="#" class="dropbtn">Menüü<IS></IS>&#9776;</a>
+                <a href="#" class="top-btn dropbtn">Menüü<IS></IS>&#9776;</a>
                 <ul class="dropdown-content">
                     <li><a href="{{ url_for('profiil') }}">Profiil</a></li>
                     <li><a href="{{ url_for('postkast') }}">Postkast</a></li>
@@ -41,19 +47,20 @@
                     <li><a href="{{ url_for('valikud') }}">Valikud õppekavas</a></li>
                     <li><a href="{{ url_for('registreeringud') }}">Registreeringud</a></li>
                     <li><a href="{{ url_for('avaldused') }}">Avaldused</a></li>
-                    #<li><a href="{{ url_for('tunniplaanid') }}">Tunniplaanid</a></li>
-                    #<li><a href="{{ url_for('õppeained') }}">Õppeained</a></li>
-                    #<li><a href="{{ url_for('õppekavad') }}">Õppekavad</a></li>
-                    #<li><a href="{{ url_for('akadeemiline_kalender')}}">Akadeemiline kalender</a></li>
+                    <li><a href="{{ url_for('tunniplaanid') }}">Tunniplaanid</a></li>
+                    <li><a href="{{ url_for('õppeained') }}">Õppeained</a></li>
+                    <li><a href="{{ url_for('õppekavad') }}">Õppekavad</a></li>
+                    <li><a href="{{ url_for('akadeemiline_kalender')}}">Akadeemiline kalender</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
       
         <!-- Tagasiside link -->
-    <button class="feedback-button" onclick="window.location.href='{{ url_for('tagasiside') }}'">
+    <button class="top-btn feedback-button" onclick="window.location.href='{{ url_for('tagasiside') }}'">
         Jäta meile tagasisidet!
     </button>
+
 </header>
 
 {% if request.endpoint == 'avaleht' %} <!-- Et semestri tähtsate kuupäevade kast oleks ainult avalehel -->
