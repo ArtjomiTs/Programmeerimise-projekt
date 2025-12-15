@@ -371,7 +371,7 @@ cursor: pointer;
 
 /* Olulise tähtaegade kast */
 .külje-box {
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.65);
   border: 0px solid black; 
   border-radius: 0px;
   padding: 25px;
