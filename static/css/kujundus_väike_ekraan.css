@@ -171,9 +171,8 @@ main {
 
 /* Tagasiside nupp */
 .feedback-button {
-    position: relative;
-    right: 200px;
-    top: 0px;
+    position: static;
+    margin-left: auto;
     background-color: transparent;
     color: white;
     padding: 15px 25px;
