@@ -7,10 +7,19 @@
 <section class="külje-box">
     <h2>Korduma kippuvad küsimused (KKK)</h2>
 
-    <form method="get" style="margin-bottom: 20px; text-align: center;">
+    <form method="get" action="{{ url_for('kkk') }}"
+        style="margin-bottom: 20px; text-align: center;">
+        
         <input type="text" name="q" placeholder="Otsi küsimust või vastust" style="width: 80%; padding: 12px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;">
         <button type="submit" style="padding: 12px 20px; font-size: 16px; border-radius: 5px; border: none; background-color: #0072c6; color: white; cursor: pointer;">Otsi</button>
-    </form>
+    
+    <!-- "Näita kõiki nupp (tühjendab otsingu) -->
+     <a href="{{ url_for('kkk') }}"
+        style="margin-left: 10px; padding: 12px 20px; font-size: 16px; border-radius: 5px;
+               background-color: #777; color: white; text-decoration: none;">
+        Näita kõiki
+    </a>
+</form>
 
     {% if kkk %}
         {% for item in kkk %}

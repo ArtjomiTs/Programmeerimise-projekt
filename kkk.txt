@@ -1,1 +1,12 @@
 Milliselt vahelehelt leiab ÕIS-i kasutaja enda matriklinumbri?||ÕIS-i kasutaja leiab enda matriklinumbri vahelehe Profiil alt. ||Profiil
+Milliselt vahelehelt saab ÕIS-i kasutaja lisada enda kontaktandmed?||ÕIS-i kasutaja saab lisada enda kontaktandmed vahelehe Profiil alt.||Profiil
+Milliselt vahelehelt saab ÕIS-i kasutaja lisada enda arvelduskonto?||ÕIS-i kasutaja saab lisada enda arvelduskonto vahelehe Profiil alt.||Profiil
+Milliselt vahelehelt leiab ÕIS-i kasutaja oma eksamiajad?||ÕIS-i kasutaja leiab enda eksamiajad vahelehe Kalender alt.||Kalender
+Milliselt vahelehelt saab ÕIS-i kasutaja näha oma läbitud õppeainete mahtu?||ÕIS-i kasutaja saab näha oma läbitud õppeainete mahtu vahelehelt Õppetulemused.||Õppetulemused
+Milliselt vahelehelt saab ÕIS-i kasutaja näha oma õppekava valikainete loetelu?||ÕIS-i kasutaja saab näha oma õppekava valikainete loetelu vahelehelt Valikud õppekavas.||Valikud õppekavas
+Milliselt vahelehelt saab ÕIS-i kasutaja registreerida ennast eksamitele ning kontrolltöödele?||ÕIS-i kasutaja saab registreerida ennast eksamitele ning kontrolltöödele vahele Registreeringud alt.||Registreeringud
+Milliselt vahelehelt saab ÕIS-i kasutaja hallata oma avaldusi?||ÕIS-i kasutaja saab hallata oma avaldusi vahelehe Avaldused alt.||Avaldused
+Milliselt vahelehelt saab ÕIS-i kasutaja vaadata oma tunniplaani?||ÕIS-i kasutaja saab vaadata oma tunniplaani vahelehe Tunniplaan alt.||Tunniplaan
+Milliselt vahelehelt saab ÕIS-i kasutaja otsida erinevate õppeainete kohta?||ÕIS-i kasutaja saab otsida erinevate õppeainete kohta vahelehe Õppeained alt.||Õppeained
+Milliselt vahelehelt leiab ÕIS-i kasutaja kõik õppekavade kohta?||ÕIS-i kasutaja leiab kõik õppekavade kohta vahelehe Õppekavad alt.||Õppekavad
+Milliselt vahelehelt leiab ÕIS-i kasutaja vabad tähtajad Ülikoolis ning teised olulised kuupäevad?||ÕIS-i kasutaja leiab vabad tähtajad Ülikoolis ning teised olulised kuupäevad vahelehe Akadeemiline kalender alt.||Akadeemiline kalender
