@@ -159,7 +159,7 @@ main {
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 0px;
-    box-shadow: 0 0px 10px white;
+    box-shadow: 0 0px 3px white;
     text-align: left;
     color: gray;
 }
@@ -183,12 +183,20 @@ main {
 .feedback-form {
     display:flex;
     flex-direction: column;
-    color: black;
+    color: gray;
 }
 
 .feedback-form label {
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+
+.tagasiside-pealkiri {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 30px;
+  color: gray;
+
 }
 
 .feedback-form textarea {
@@ -219,7 +227,7 @@ main {
 
 footer {
     text-align: right;
-    padding: 20px 0;
+    padding: 20px 30px;
     background-color: transparent;
     color: white;
     border-radius: 0px;
@@ -296,18 +304,27 @@ footer {
 }
 
 .info-box {
-  font-size: 15px;
+  font-size: 1rem;
   margin-top: 500px;
   padding: 30px;
   margin: 50px auto;
-  background-color: gray;
+  background-color: transparent;
   color: black;
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+
 }
 
 .autorite-list {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 1.3rem;
   text-align: left;
+  color: black;
 }
 
 .kontrolli-button {
@@ -315,7 +332,7 @@ footer {
     bottom: 1px;
     left: 960px;
     background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: black;
     padding: 15px 25px;
     font-size: 35px;
     border-radius: 12px;
@@ -327,7 +344,7 @@ footer {
 }
 
 .kontrolli-button:hover {
-    background-color: black;
+    background-color: gray;
     transform: scale(1.1);
 }
 /* Profiili vahelehe pilt */
@@ -341,7 +358,12 @@ footer {
 
 .kalender-image {
   max-width: 1200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
+
 .postkast-image {
   max-width: 1200px;
 }
@@ -355,12 +377,13 @@ footer {
 
 .küsimustik-button {
 
-background-color: black;
-color: orange;
-padding: 10px 20px;
+background-color: transparent;
+color: black;
+padding: 15px 25px;
 border: none;
-border-radius: 8px;
+border-radius: 12px;
 cursor: pointer;
+font-size: 25px;
 }
 
 .fade-message { opacity: 0; transition: opacity 0.5s; }

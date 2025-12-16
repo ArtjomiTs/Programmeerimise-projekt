@@ -109,11 +109,11 @@ def kontroll():
         q7 = request.form.get("q7", "").lower()
         q8 = request.form.get("q8", "").lower()
 
-        if "martikkel" in q1:
+        if "matrikkel" in q1 or "matriklinumber" in q1:
             tulemus += 1
-        if "isikuandmed" in q2 or "kontonumber" in q2:
+        if "isikuandmed" in q2 or "kontonumber" in q2 or "arvelduskonto" or "pangakonto" in q2 or "pangaarve" in q2:
             tulemus += 1
-        if "avaleht" in q3:
+        if "avaleht" in q3 or "avalehel" in q3:
             tulemus += 1
         if "kalender" in q4 or "minu kalender" in q4:
             tulemus += 1

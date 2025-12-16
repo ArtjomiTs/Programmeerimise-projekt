@@ -253,7 +253,7 @@ main {
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px white;
     text-align: left;
     color: rgba(195, 128, 3, 0.977);
 }
@@ -285,6 +285,14 @@ main {
     margin-bottom: 0.5rem;
 }
 
+.tagasiside-pealkiri {
+  font-size: 1.8rem;
+  text-align: left;
+  margin-bottom: 30px;
+  color: black;
+
+}
+
 .feedback-form textarea {
     padding: 20px;
     font-size: 2rem;
@@ -313,7 +321,7 @@ main {
 
 footer {
     text-align: right;
-    padding: 20px 0;
+    padding: 20px 30px;
     background: linear-gradient(90deg, #000000, #0a0a0a, #111111);
     color: white;
     border-radius: 0px;
@@ -394,18 +402,29 @@ footer {
 }
 
 .info-box {
-  font-size: 15px;
+  font-size: 1rem;
   margin-top: 500px;
   padding: 30px;
   margin: 50px auto;
-  background-color: lightblue;
+  background-color: transparent;
+  color: white;
   color: black;
+}
+
+.info-box h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  color: black;
+
 }
 
 .autorite-list {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 1.3rem;
   text-align: left;
+  color: black;
 }
 
 .kontrolli-button {
@@ -439,7 +458,12 @@ footer {
 
 .kalender-image {
   max-width: 1200px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
+
 .postkast-image {
   max-width: 1200px;
 }
@@ -452,13 +476,13 @@ footer {
 }
 
 .küsimustik-button {
-
-background-color: black;
-color: orange;
-padding: 10px 20px;
+background-color: transparent;
+color: black;
+padding: 15px 25px;
 border: none;
-border-radius: 8px;
+border-radius: 12px;
 cursor: pointer;
+font-size: 25px;
 }
 
 .fade-message { opacity: 0; transition: opacity 0.5s; }
