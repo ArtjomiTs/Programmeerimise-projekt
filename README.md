@@ -6,8 +6,9 @@ Mihkel Tomson
 Artjom Tšerkassov
 
 Juhend:
-Programmi käivitamiseks "python app.py"
-Veebilehele on hetkel lisatud tagasiside funktsionaalsus, teised funktsioonid lisanduvad
-järgneva töö käigus. 
+1) Programmi käivitamiseks sisestada terminali käsk "python app.py".
+2) Veebilehe kujunduse muutmiseks muuta vastav .css fail base.html failis.
+
+
 
 
