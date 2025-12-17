@@ -5,6 +5,7 @@ Milliselt vahelehelt leiab ÕIS-i kasutaja oma eksamiajad?||ÕIS-i kasutaja leia
 Milliselt vahelehelt saab ÕIS-i kasutaja näha oma läbitud õppeainete mahtu?||ÕIS-i kasutaja saab näha oma läbitud õppeainete mahtu vahelehelt Õppetulemused.||Õppetulemused||/õppetulemused
 Milliselt vahelehelt saab ÕIS-i kasutaja näha oma õppekava valikainete loetelu?||ÕIS-i kasutaja saab näha oma õppekava valikainete loetelu vahelehelt Valikud õppekavas.||Valikud õppekavas||/valikud
 Milliselt vahelehelt saab ÕIS-i kasutaja registreerida ennast eksamitele ning kontrolltöödele?||ÕIS-i kasutaja saab registreerida ennast eksamitele ning kontrolltöödele vahele Registreeringud alt.||Registreeringud||/registreeringud
+Kuidas saab ainetele registeerida?||Ainetele registreerimine toimub "Registreeringud" vahelehel. Valite üleval semester, õppeainetel otsite kohustatus või mittekohustatud õppeained, lisate planeerijasse ja pärast registreerite.||Registreeringud||/registreeringud
 Milliselt vahelehelt saab ÕIS-i kasutaja hallata oma avaldusi?||ÕIS-i kasutaja saab hallata oma avaldusi vahelehe Avaldused alt.||Avaldused||/avaldused
 Milliselt vahelehelt saab ÕIS-i kasutaja vaadata oma tunniplaani?||ÕIS-i kasutaja saab vaadata oma tunniplaani vahelehe Tunniplaan alt.||Tunniplaan||/tunniplaanid
 Milliselt vahelehelt saab ÕIS-i kasutaja otsida erinevate õppeainete kohta?||ÕIS-i kasutaja saab otsida erinevate õppeainete kohta vahelehe Õppeained alt.||Õppeained||/õppeained
