@@ -154,6 +154,13 @@ nav a[href="{{ url_for('avaleht') }}"]:hover {
     transform: scale(1.07);
     box-shadow: 0 0 15px #39FF14, 0 0 30px #39FF14;
 }
+
+a {
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+
 /* Põhisisu */ 
 main {
     flex: 1 0 auto;
