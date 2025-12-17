@@ -140,17 +140,18 @@ def loe_kkk():
         with open(KKK_FAIL, "r", encoding="utf-8") as f:
             for rida in f:
                 osad = rida.strip().split("||")
-                if len(osad) == 3:
+                if len(osad) == 4:
                     kkk.append({
                         "küsimus": osad[0],
                         "vastus" : osad[1],
                         "kategooria": osad[2]
+                        "kategoorialink": osad[3]
                     })
     return kkk
 
-def lisa_kkk(küsimus, vastus, kategooria):
+def lisa_kkk(küsimus, vastus, kategooria, kategoorialink):
     with open(KKK_FAIL, "a", encoding="utf-8") as f:
-        f.write(f"{küsimus}||{vastus}||{kategooria}\n")
+        f.write(f"{küsimus}||{vastus}||{kategooria}||{kategoorialink}\n")
 
 @app.route("/kkk")
 def kkk():
@@ -187,7 +188,10 @@ def admin_kkk():
         küsimus = request.form["küsimus"]
         vastus = request.form["vastus"]
         kategooria = request.form["kategooria"]
-        lisa_kkk(küsimus, vastus, kategooria)
+        kategoorialink = request.form.get('kategoorialink')
+        if kategoorialink and not kategoorialink.startswith("/"):
+            kategoorialink = "/" + kategoorialink
+        lisa_kkk(küsimus, vastus, kategooria, kategoorialink)
         return redirect(url_for("admin_kkk"))
     
     return render_template("admin_kkk.html", kkk=loe_kkk())
@@ -210,7 +214,7 @@ def admin_kkk_delete(index):
         # Salvesta uuesti faili
         with open(KKK_FAIL, "w", encoding="utf-8") as f:
             for item in kkk_list:
-                f.write(f"{item['küsimus']}||{item['vastus']}||{item['kategooria']}\n")
+                f.write(f"{item['küsimus']}||{item['vastus']}||{item['kategooria']}||{item['kategoorialink']}\n")
     return redirect(url_for("admin_kkk"))
 
 
