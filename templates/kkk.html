@@ -29,6 +29,13 @@
                 <em>({{ item.kategooria }})</em>
             </summary>
             <p>{{ item.vastus }}</p>
+            <p>
+                {% if item.kategoorialink %}
+                    <a href="{{ item.kategoorialink }}" target="_blank">{{ item.kategooria }}</a>
+                {% else %}
+                    {{ item.kategooria }}
+                {% endif %}
+            </p>
         </details>
     {% endfor %}
 {% else %}
