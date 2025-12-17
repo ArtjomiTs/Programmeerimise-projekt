@@ -144,7 +144,7 @@ def loe_kkk():
                     kkk.append({
                         "küsimus": osad[0],
                         "vastus" : osad[1],
-                        "kategooria": osad[2]
+                        "kategooria": osad[2],
                         "kategoorialink": osad[3]
                     })
     return kkk
